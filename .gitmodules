@@ -1,10 +1,10 @@
 [submodule "cicada-engine"]
 	path = cicada-engine
-	url = git@github.com:readablesystems/cicada-engine.git
+	url = https://github.com/readablesystems/cicada-engine.git
 	branch = yihe
 [submodule "DBx1000"]
 	path = DBx1000
-	url = https://github.com/efficient/cicada-exp-sigmod2017-DBx1000.git
+	url = https://github.com/readablesystems/cicada-exp-sigmod2017-DBx1000.git
 [submodule "silo"]
 	path = silo
 	url = https://github.com/efficient/cicada-exp-sigmod2017-silo.git

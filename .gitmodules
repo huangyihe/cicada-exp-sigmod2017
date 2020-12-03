@@ -1,6 +1,6 @@
 [submodule "cicada-engine"]
 	path = cicada-engine
-	url = https://github.com/readablesystems/cicada-engine.git
+	url = https://github.com/readablesystems/cicada-core.git
 	branch = yihe
 [submodule "DBx1000"]
 	path = DBx1000

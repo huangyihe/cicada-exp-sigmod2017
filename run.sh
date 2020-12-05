@@ -1,13 +1,13 @@
 #!/bin/bash
 
+cp config.h DBx1000
 cd DBx1000
 
 SCRIPT=/home/ubuntu/cicada-exp-sigmod2017/cicada-engine/script/setup.sh
 
-$SCRIPT 24576 24576
+$SCRIPT 51200 51200
 
-
-for w in 1 4
+for w in 1 4 0
 do
   sed -i "s/^#define PART_CNT .*$/#define PART_CNT $w/g" config.h
   sed -i "s/^#define NUM_WH .*$/#define NUM_WH $w/g" config.h
@@ -21,6 +21,10 @@ do
   for i in 1 2 4 12 23 24 31 32 36 47 48
   do
     printf "$i" >> $OUTFILE
+    if [ $w -eq 0 ]; then
+      sed -i "s/^#define PART_CNT .*$/#define PART_CNT $i/g" config.h
+      sed -i "s/^#define NUM_WH .*$/#define NUM_WH $i/g" config.h
+    fi
     sed -i "s/^#define THREAD_CNT .*$/#define THREAD_CNT $i/g" config.h
     make clean > /dev/null 2>&1
     make rundb -j40 > /dev/null 2>&1
@@ -37,3 +41,6 @@ do
 done
 
 $SCRIPT 0 0
+
+python3 /home/ubuntu/send_email.py -e 'Cicada' c-*-results.txt
+sudo shutdown -h +1

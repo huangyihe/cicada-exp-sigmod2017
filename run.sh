@@ -18,7 +18,7 @@ do
     printf ",Cicada (W$w) [T$k]" >> $OUTFILE
   done
   printf "\n" >> $OUTFILE
-  for i in 1 2 4 12 23 24 31 32 36 47 48
+  for i in 1 2 4 8 16 32 48 64
   do
     printf "$i" >> $OUTFILE
     if [ $w -eq 0 ]; then

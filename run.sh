@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cp config.h DBx1000
 cd DBx1000
 
 SCRIPT=/home/ubuntu/cicada-exp-sigmod2017/cicada-engine/script/setup.sh

@@ -6,7 +6,7 @@
   url = https://github.com/readablesystems/cicada-exp-sigmod2017-DBx1000.git
 [submodule "silo"]
   path = silo
-  url = git@github.com:readablesystems/cicada-exp-sigmod2017-silo.git
+  url = https://github.com/readablesystems/cicada-exp-sigmod2017-silo.git
 [submodule "ermia"]
   path = ermia
   url = https://github.com/efficient/cicada-exp-sigmod2017-ermia.git
